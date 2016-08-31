@@ -2,10 +2,6 @@
 General
 ****************/
 
-* {
-  box-sizing: border-box;
-}
-
 body {
 	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: 1rem;
@@ -15,8 +11,20 @@ body {
 
 #wrapper {
 	max-width: 940px;
-	margin: 0 auto;
+	margin: 2rem auto 0;
 	padding: 0 5%;
+}
+
+h2 {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #767676;
+}
+
+#ozInput {
+	display: flex;
+	justify-content: center; 
 }
 
 /***************
@@ -24,7 +32,7 @@ Heading
 ****************/
 
 #main-header {
-  height: 60px;
+  height: 45px;
   background-color: #4da6ff;
   display: flex;
   justify-content: center;
@@ -41,7 +49,7 @@ h1 {
 }
 
 #mug {
-	width: 2em;
+	width: 2.25em;
 	height: auto;
 	margin-left: 0;
 	padding: 0;
@@ -54,6 +62,6 @@ Input fields
 input[type=text] {
 	padding: .25em;
 	width: 3rem;
-	border: 2px solid #ffb13f;
+	border: 2px solid #FF9700;
 	border-radius: 4px;
 }
