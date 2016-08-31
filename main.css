@@ -9,7 +9,7 @@ General
 body {
 	font-family: 'Roboto', 'Arial', sans-serif;
 	text-align: center;
-	color: #808080;
+	color: #767676;
 }
 
 #wrapper {
@@ -18,29 +18,12 @@ body {
 	padding: 0 5%;
 }
 
-h2 {
-	color: #808080;
-}
-
-#prompt {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-wrap: wrap;
-}
-
-input[type=text] {
-	margin: 1em;
-	padding: .25em;
-	width: 2em;
-}
-
 /***************
 Heading
 ****************/
 
 #main-header {
-  height: 65px;
+  height: 60px;
   background-color: #4da6ff;
   display: flex;
   justify-content: center;
@@ -48,7 +31,7 @@ Heading
 }
 
 .logo {
-	font-size: 30px;
+	font-size: 28px;
 	font-family: 'Maven Pro', sans-serif;
 	margin: auto 0;
 	padding: 5px;
@@ -58,4 +41,15 @@ Heading
 #mug {
 	margin-left: 0;
 	padding: 0;
+}
+
+/***************
+Input fields
+****************/
+
+input[type=text] {
+	padding: .25em;
+	width: 3rem;
+	border: 2px solid #ffb13f;
+	border-radius: 4px;
 }
