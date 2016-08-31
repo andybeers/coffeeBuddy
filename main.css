@@ -1,9 +1,61 @@
 /***************
-Main styles
+General
 ****************/
 
 body {
-	font-family: 'Lato', 'Arial', sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+#wrapper {
+	max-width: 940px;
+	margin: 0 auto;
+	padding: 0 5%;
+}
+
+h2 {
+	letter-spacing: 1px;
+	font-weight: 400;
+	margin: 10px;
+}
+
+#prompt {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+input[type=text] {
+	margin: 1em;
+	padding: .25em;
+	width: 2em;
+}
+
+/***************
+Heading
+****************/
+
+.main-header {
+  height: 70px;
+  padding-top: 0;
+  background: linear-gradient(to bottom, rgb(249, 232, 174), transparent 99%),
+              linear-gradient(to top, rgb(255, 253, 246), transparent 99%),
+              
+              #fff7e6 url('img/wood.jpg') no-repeat center;
+  
+  background-size: cover;
+}
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	letter-spacing: 3px;
+	padding: 5px;
+}
+
+.coffeeBuddy {
+	margin-top: 0;
 }
 
 
@@ -12,6 +64,25 @@ Colors
 ****************/
 
 body {
-	/*background-color: #FFFBEE;*/
-	background-color: #99ccff;
+	background-color: rgb(255, 253, 246);
+	color: #002266;
 }
+
+header {
+	background-color: rgb(255, 253, 246);
+}
+
+h1 {
+	color: rgb(18, 9, 113);
+}
+
+#wrapper {
+
+}
+
+
+/*#wrapper {
+	background:
+		linear-gradient(to bottom, #99ceff),
+		linear-gradient(to top, #003cb3);
+}*/

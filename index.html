@@ -3,31 +3,40 @@
 <head>
 	<meta charset="utf-8">
 	<title>coffeeBuddy</title>
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,400i" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css"> 
+	<link rel="stylesheet" href="main.css"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<div id="prompt">
-		<p>I'm brewing oz of coffee...</p>
+	<header class="main-header">
+		<h1 class="coffeeBuddy">coffeeBuddy</h1>
+	</header>
+	<div id="wrapper">
+		<div id="prompt">
+			<h2>I'd like to brew:</h2> 
+			<form id="brew">
+				<input type=text name="oz">
+			</form> 
+			<h1>ounces of coffee.</h1>
+		</div>
+		<button type="submit" form="brew">Go</button>
+		<div id="recipe-output">
+			<p>
+				<span>Use</span> <span>grams of coffee, ground</span>
+			</p>
+			<p>
+				<span>Use</span> <span>grams of water</span>
+			</p>
+			<button>Save this recipe</button>
+		</div>
+		<div id="ratio">
+			<p>
+				<span>Recipe using </span> <span>water/coffee ratio.</span>
+			</p>
+			<p>I tried this, but I like my coffee <button>stonger</button> <button>lighter</button></p>
+		</div>
 	</div>
-	<div id="recipe-output">
-		<p>
-			<span>Use</span> <span>grams of coffee, ground</span>
-		</p>
-		<p>
-			<span>Use</span> <span>grams of water</span>
-		</p>
-		<button>Save this recipe</button>
-	</div>
-	<div id="ratio">
-		<p>
-			<span>Recipe using </span> <span>water/coffee ratio.</span>
-		</p>
-		<p>I tried this, but I like my coffee <button>stonger</button> <button>lighter</button></p>
-	</div>
-
 	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
