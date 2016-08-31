@@ -22,9 +22,10 @@ h2 {
 	color: #767676;
 }
 
-#ozInput {
+#ozInput, #methodInput {
 	display: flex;
 	justify-content: center; 
+	align-items: center;
 }
 
 /***************

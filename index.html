@@ -19,9 +19,17 @@
 			<form id="brew">
 				<input type=text name="oz">
 			</form> 
-			<p>ounces of coffee.</p>
+			<p>ounces of coffee</p>
 		</div>
-		<button type="submit" form="brew">Go</button>
+		<div id="methodInput">
+			<p>using a</p>
+			<select name="methods" form="brew">
+				<option value="chemex">Chemex</option>
+				<option value="drip">Drip Machine</option>
+				<option value="frenchpress">French Press</option>
+			</select>
+		</div>
+		<button type="submit" form="brew">Calculate</button>
 		<p>Use grams of coffee, ground</p>
 		<p>Use grams of water</p>
 		<button>Save this recipe</button>
