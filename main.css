@@ -2,8 +2,12 @@
 General
 ****************/
 
+* {
+  box-sizing: border-box;
+}
+
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Helvetica', sans-serif;
 	text-align: center;
 }
 
@@ -36,26 +40,18 @@ input[type=text] {
 Heading
 ****************/
 
-.main-header {
-  height: 70px;
-  padding-top: 0;
-  background: linear-gradient(to bottom, rgb(249, 232, 174), transparent 99%),
-              linear-gradient(to top, rgb(255, 253, 246), transparent 99%),
-              
-              #fff7e6 url('img/wood.jpg') no-repeat center;
-  
-  background-size: cover;
+#main-header {
+  height: 60px;
+  background-color: #66ccff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
-	letter-spacing: 3px;
-	padding: 5px;
-}
-
-.coffeeBuddy {
+.logo {
 	margin-top: 0;
+	font-family: 'Abel', sans-serif;;
+	padding: 5px;
 }
 
 
@@ -68,9 +64,6 @@ body {
 	color: #002266;
 }
 
-header {
-	background-color: rgb(255, 253, 246);
-}
 
 h1 {
 	color: rgb(18, 9, 113);
