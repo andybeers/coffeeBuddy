@@ -3,34 +3,36 @@
 <head>
 	<meta charset="utf-8">
 	<title>coffeeBuddy</title>
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Roboto:400,400i,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="main.css"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-	<header class="main-header">
-		<h1 class="coffeeBuddy">coffeeBuddy</h1>
+	<header id="main-header">
+		<h1>coffeeBuddy</h1>
+		<img src="img/coffeeLogoAccent3.png" alt="coffeeBuddy logo" id="mug">
 	</header>
 	<div id="wrapper">
-		<div id="prompt">
-			<h2>I'd like to brew:</h2> 
+		<div id="inputOz">
+			<p class="beforeinput">Fluid ounces of brewed coffee:</p>
 			<form id="brew">
 				<input type=text name="oz">
 			</form> 
-			<h1>ounces of coffee.</h1>
 		</div>
-		<button type="submit" form="brew">Go</button>
-		<div id="recipe-output">
-			<p>
-				<span>Use</span> <span>grams of coffee, ground</span>
-			</p>
-			<p>
-				<span>Use</span> <span>grams of water</span>
-			</p>
+		<div id="inputMethod">
+			<p class="beforeinput">...with brew method:</p>
+			<select name="methods" form="brew">
+				<option value="chemex">Chemex</option>
+				<option value="drip">Drip Machine</option>
+				<option value="frenchpress">French Press</option>
+			</select>
+		</div>
+		<button type="submit" form="brew" class="button">Get Brewing!</button>
+		<div class="output">
+			<p>Use grams of coffee, ground</p>
+			<p>Use grams of water</p>
 			<button>Save this recipe</button>
-		</div>
-		<div id="ratio">
 			<p>
 				<span>Recipe using </span> <span>water/coffee ratio.</span>
 			</p>

@@ -3,86 +3,107 @@ General
 ****************/
 
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 1rem;
 	text-align: center;
+	color: #767676;
 }
 
 #wrapper {
 	max-width: 940px;
-	margin: 0 auto;
+	margin: 1.5rem auto 0;
 	padding: 0 5%;
 }
 
-h2 {
-	letter-spacing: 1px;
+p {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: 1rem;
 	font-weight: 400;
-	margin: 10px;
+	color: #767676;
 }
 
-#prompt {
+#inputOz, #inputMethod {
 	display: flex;
-	justify-content: center;
+	justify-content: center; 
 	align-items: center;
-	flex-wrap: wrap;
 }
 
-input[type=text] {
-	margin: 1em;
-	padding: .25em;
-	width: 2em;
+.input {
+	border: 2px solid #595959;
+}
+
+.beforeinput {
+	margin-right: .2rem;
 }
 
 /***************
-Heading
+Header
 ****************/
 
-.main-header {
-  height: 70px;
-  padding-top: 0;
-  background: linear-gradient(to bottom, rgb(249, 232, 174), transparent 99%),
-              linear-gradient(to top, rgb(255, 253, 246), transparent 99%),
-              
-              #fff7e6 url('img/wood.jpg') no-repeat center;
-  
-  background-size: cover;
+#main-header {
+  height: 45px;
+  background-color: #4da6ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -1px 8px #767676;
 }
 
 h1 {
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 700;
-	letter-spacing: 3px;
+	font-size: 1.75rem;
+	font-family: 'Maven Pro', sans-serif;
+	margin: auto 0;
 	padding: 5px;
+	color: #fff7e6;
 }
 
-.coffeeBuddy {
-	margin-top: 0;
+#mug {
+	width: 2.25em;
+	height: auto;
+	margin-left: -.2em;
+	margin-bottom: .1em;
+	padding: 0;
 }
-
 
 /***************
-Colors
+Inputs and Buttons
 ****************/
 
-body {
-	background-color: rgb(255, 253, 246);
-	color: #002266;
+#brew input[type=text] {
+	padding: .5rem;
+	width: 2rem;
+	border: 2px solid #FF9700;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	outline: none;
 }
 
-header {
-	background-color: rgb(255, 253, 246);
+#brew input[type=text]:focus {
+	background-color: white;
 }
 
-h1 {
-	color: rgb(18, 9, 113);
+input {
+	text-align: center;
+	font-family: 'Roboto', 'Arial', sans-serif;
+	color: #4d4d4d;
 }
 
-#wrapper {
-
+select {
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	background-color: #f2f2f2;
+	color: #4d4d4d;
 }
 
+.button {
+	width: auto;
+	padding: .5rem;
+	margin: 1rem;
+	border: none;
+	border-radius: 5px;
+	background-color: #4da6ff;
+	color: #fff7e6;
+	box-shadow: 2px 3px 13px -5px rgba(0,0,0,0.75);
+}
 
-/*#wrapper {
-	background:
-		linear-gradient(to bottom, #99ceff),
-		linear-gradient(to top, #003cb3);
-}*/
