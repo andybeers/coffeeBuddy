@@ -14,15 +14,14 @@
 		<img src="img/coffeeLogoAccent3.png" alt="coffeeBuddy logo" id="mug">
 	</header>
 	<div id="wrapper">
-		<h2>I want to brew...</h2>
-		<div id="ozInput">
+		<div id="inputOz">
+			<p class="beforeinput">Fluid ounces of brewed coffee:</p>
 			<form id="brew">
 				<input type=text name="oz">
 			</form> 
-			<p>ounces of coffee</p>
 		</div>
-		<div id="methodInput">
-			<p>using a</p>
+		<div id="inputMethod">
+			<p class="beforeinput">with brew method:</p>
 			<select name="methods" form="brew">
 				<option value="chemex">Chemex</option>
 				<option value="drip">Drip Machine</option>
@@ -30,13 +29,15 @@
 			</select>
 		</div>
 		<button type="submit" form="brew">Calculate</button>
-		<p>Use grams of coffee, ground</p>
-		<p>Use grams of water</p>
-		<button>Save this recipe</button>
-		<p>
-			<span>Recipe using </span> <span>water/coffee ratio.</span>
-		</p>
-		<p>I tried this, but I like my coffee <button>stonger</button> <button>lighter</button></p>
+		<div class="output">
+			<p>Use grams of coffee, ground</p>
+			<p>Use grams of water</p>
+			<button>Save this recipe</button>
+			<p>
+				<span>Recipe using </span> <span>water/coffee ratio.</span>
+			</p>
+			<p>I tried this, but I like my coffee <button>stonger</button> <button>lighter</button></p>
+		</div>
 	</div>
 	<script type="text/javascript" src="app.js"></script>
 </body>
