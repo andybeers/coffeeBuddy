@@ -66,15 +66,20 @@ h1 {
 }
 
 /***************
-Input fields
+Inputs and Buttons
 ****************/
 
 #brew input[type=text] {
-	padding: .5em;
+	padding: .5rem;
 	width: 2rem;
 	border: 2px solid #FF9700;
-	border-radius: 4px;
+	border-radius: 8px;
 	background-color: #f2f2f2;
+	outline: none;
+}
+
+#brew input[type=text]:focus {
+	background-color: white;
 }
 
 input {
@@ -82,3 +87,23 @@ input {
 	font-family: 'Roboto', 'Arial', sans-serif;
 	color: #4d4d4d;
 }
+
+select {
+	border: none;
+	border-radius: 8px;
+	outline: none;
+	background-color: #f2f2f2;
+	color: #4d4d4d;
+}
+
+.button {
+	width: auto;
+	padding: .5rem;
+	margin: 1rem;
+	border: none;
+	border-radius: 8px;
+	background-color: #4da6ff;
+	color: #fff7e6;
+	box-shadow: 2px 3px 13px -5px rgba(0,0,0,0.75);
+}
+
