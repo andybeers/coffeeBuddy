@@ -14,29 +14,31 @@
 		<img src="img/coffeeLogoAccent3.png" alt="coffeeBuddy logo" id="mug">
 	</header>
 	<div id="wrapper">
-		<div id="inputOz">
-			<p class="beforeinput">Fluid ounces of brewed coffee:</p>
-			<form id="brew">
-				<input type=text name="oz">
-			</form> 
+		<div id="col1">
+			<div id="inputOz">
+				<p class="beforeinput">Fluid ounces of brewed coffee:</p>
+				<form id="brew">
+					<input type=text name="oz">
+				</form> 
+			</div>
+			<div id="inputMethod">
+				<p class="beforeinput">...with brew method:</p>
+				<select name="methods" form="brew">
+					<option value="chemex">Chemex</option>
+					<option value="drip">Drip Machine</option>
+					<option value="frenchpress">French Press</option>
+				</select>
+			</div>
+			<button type="submit" form="brew" class="button">Get Brewing!</button>
 		</div>
-		<div id="inputMethod">
-			<p class="beforeinput">...with brew method:</p>
-			<select name="methods" form="brew">
-				<option value="chemex">Chemex</option>
-				<option value="drip">Drip Machine</option>
-				<option value="frenchpress">French Press</option>
-			</select>
-		</div>
-		<button type="submit" form="brew" class="button">Get Brewing!</button>
-		<div class="output">
-			<p>Use grams of coffee, ground</p>
-			<p>Use grams of water</p>
-			<button>Save this recipe</button>
-			<p>
-				<span>Recipe using </span> <span>water/coffee ratio.</span>
-			</p>
-			<p>I tried this, but I like my coffee <button>stonger</button> <button>lighter</button></p>
+		<div id="col2">
+			<div class="output">
+				<p>Use grams of coffee, <i>ground</i></p>
+				<p>Use grams of water</p>
+				<button class="button">Save this recipe</button>
+				<p><i>This recipe uses a brew ratio of 16:1</i></p>
+				<p><i>I tried this, but I like my coffee <button class="button">stonger</button> <button class="button">lighter</button></i></p>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="app.js"></script>
