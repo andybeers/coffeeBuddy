@@ -7,12 +7,17 @@ body {
 	font-size: 1rem;
 	text-align: center;
 	color: #767676;
+	background-color: #fff7e6;
 }
 
-#wrapper {
-	max-width: 940px;
-	margin: 1.5rem auto 0;
-	padding: 0 5%;
+#col1, #col2 {
+	max-width: 300px;
+	margin: .75rem auto 0;
+	padding: .5rem .5rem;
+	background-color: white;
+	border: 2px solid #f2f2f2;
+	border-radius: 5px;
+	box-shadow: 2px 3px 13px -5px rgba(0,0,0,0.75);
 }
 
 p {
@@ -20,11 +25,12 @@ p {
 	font-size: 1rem;
 	font-weight: 400;
 	color: #767676;
+	margin: .5rem;
 }
 
 #inputOz, #inputMethod {
 	display: flex;
-	justify-content: center; 
+	justify-content: space-between; 
 	align-items: center;
 }
 
@@ -98,8 +104,8 @@ select {
 
 .button {
 	width: auto;
-	padding: .5rem;
-	margin: 1rem;
+	padding: .35rem;
+	margin: .6rem;
 	border: none;
 	border-radius: 5px;
 	background-color: #4da6ff;
