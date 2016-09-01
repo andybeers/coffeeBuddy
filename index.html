@@ -13,25 +13,25 @@
 		<h1>coffeeBuddy</h1>
 		<img src="img/coffeeLogoAccent3.png" alt="coffeeBuddy logo" id="mug">
 	</header>
-	<div id="wrapper">
-		<div id="col1">
-			<div id="inputOz">
-				<p class="beforeinput">Fluid ounces of brewed coffee:</p>
+	<div id="container">
+		<div class="col">
+			<div class="inputDiv">
+				<p>Fluid ounces of brewed coffee:</p>
 				<form id="brew">
 					<input type=text name="oz">
 				</form> 
 			</div>
-			<div id="inputMethod">
-				<p class="beforeinput">...with brew method:</p>
+			<div class="inputDiv">
+				<p>...with brew method:</p>
 				<select name="methods" form="brew">
 					<option value="chemex">Chemex</option>
 					<option value="drip">Drip Machine</option>
 					<option value="frenchpress">French Press</option>
 				</select>
 			</div>
-			<button type="submit" form="brew" class="button">Get Brewing!</button>
+			<button type="submit" form="brew" class="button" id="getBrewing">Get Brewing!</button>
 		</div>
-		<div id="col2">
+		<div class="col">
 			<div class="output">
 				<p>Use grams of coffee, <i>ground</i></p>
 				<p>Use grams of water</p>

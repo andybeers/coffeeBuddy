@@ -2,16 +2,12 @@ var oz;
 var ratio = 16;
 var gCoffee;
 var gWater;
-var brewWater
+var brewWater;
 
 //convert fluid oz input to grams
 function convert(oz) {
 	return (oz * 29.57);
 }
-
-
-// oz * 29.57 / ratio = gCoffee
-// gCoffee * 2 + gWater = brewWater 
 
 //Funtion to calculate appropriate grams of coffee and water to use in brew recipe based on user's desired fluid ounces of final brew
 function calculateBrew (oz, ratio) {
@@ -26,5 +22,5 @@ function calculateBrew (oz, ratio) {
 	}
 }
 
-console.log(calculateBrew(20, 17));
 
+document.getElementById("getBrewing()").submit();

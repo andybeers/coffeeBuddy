@@ -4,15 +4,23 @@ General
 
 body {
 	font-family: 'Roboto', 'Arial', sans-serif;
-	font-size: 1rem;
-	text-align: center;
 	color: #767676;
 	background-color: #fff7e6;
+	text-align: center;
 }
 
-#col1, #col2 {
-	max-width: 300px;
-	margin: .75rem auto 0;
+#container {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	align-content: stretch;
+}
+
+.col {
+	max-width: 75%;
+	margin: .75rem .0;
 	padding: .5rem .5rem;
 	background-color: white;
 	border: 2px solid #f2f2f2;
@@ -20,26 +28,23 @@ body {
 	box-shadow: 2px 3px 13px -5px rgba(0,0,0,0.75);
 }
 
-p {
-	font-family: 'Roboto', 'Arial', sans-serif;
-	font-size: 1rem;
-	font-weight: 400;
-	color: #767676;
-	margin: .5rem;
-}
-
-#inputOz, #inputMethod {
+.inputDiv {
 	display: flex;
-	justify-content: space-between; 
+	justify-content: space-around; 
 	align-items: center;
+	flex-grow: 1;
 }
 
 .input {
 	border: 2px solid #595959;
 }
 
-.beforeinput {
-	margin-right: .2rem;
+p {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: .9em;
+	font-weight: 400;
+	color: #767676;
+	margin: .5rem;
 }
 
 /***************
@@ -111,5 +116,25 @@ select {
 	background-color: #4da6ff;
 	color: #fff7e6;
 	box-shadow: 2px 3px 13px -5px rgba(0,0,0,0.75);
+}
+
+/***************
+Media Queries
+****************/
+
+@media screen and (min-width: 580px) {
+
+#container {
+	flex-direction: row;
+}
+
+.col {
+	/*width: 46%;*/
+}
+
+p {
+	font-size: 1em;
+}
+
 }
 
