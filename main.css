@@ -29,7 +29,7 @@ p {
 }
 
 .input {
-	border: 3px solid #595959;
+	border: 2px solid #595959;
 }
 
 .beforeinput {
@@ -73,7 +73,7 @@ Inputs and Buttons
 	padding: .5rem;
 	width: 2rem;
 	border: 2px solid #FF9700;
-	border-radius: 8px;
+	border-radius: 5px;
 	background-color: #f2f2f2;
 	outline: none;
 }
@@ -90,7 +90,7 @@ input {
 
 select {
 	border: none;
-	border-radius: 8px;
+	border-radius: 5px;
 	outline: none;
 	background-color: #f2f2f2;
 	color: #4d4d4d;
@@ -101,7 +101,7 @@ select {
 	padding: .5rem;
 	margin: 1rem;
 	border: none;
-	border-radius: 8px;
+	border-radius: 5px;
 	background-color: #4da6ff;
 	color: #fff7e6;
 	box-shadow: 2px 3px 13px -5px rgba(0,0,0,0.75);
