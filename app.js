@@ -1,33 +1,25 @@
-// var gCoffee;
-// var gWater;
-// var brewWater;
-
-// var oz = ounces.value;
-
-// var strongerButton = document.getElementById("stronger");
-// var weakerButton = document.getElementById("lighter");
-
-// //convert fluid oz input to grams
-// function convert(oz) {
-// 	return (oz * 29.57);
-// }
-
-// //Funtion to calculate appropriate grams of coffee and water to use in brew recipe based on user's desired fluid ounces of final brew
-// function calculateBrew (oz, ratio) {
-// 	var oz = document.getElementById(ozInput).value;
-// 	var ratio = 16;
-// 	gWater = convert(oz); //grams water
-// 	gCoffee = gWater / ratio; //grams coffee
-// 	brewWater = gCoffee * 2 + gWater; //grams water adjusted up to account for absorption by grounds
-// 	console.log(oz);
-// }
-
-// brewButton.addEventListener("click", test);
-
 var brewButton = document.getElementById("getBrewing");
+var strongerButton = document.getElementById("stronger");
+var weakerButton = document.getElementById("lighter");
 
-brewButton.onclick = function() {
-	var oz = parseInt(document.getElementById("ozInput").value);
-	console.log(oz + "oz input");
+
+function calculateBrew() {
+	var ratio = 16; //Set default ratio 16:1
+	var oz = parseInt(document.getElementById("ozInput").value); //grab user input value for oz
+	console.log(oz + " oz input");
+	var gWater = oz * 29.57; //convert fluid oz to grams
+	console.log(gWater + " grams of water");
+	var gCoffee = gWater/ratio; //calculate grams coffee
+	console.log(gCoffee);
+	var brewWater = gCoffee * 2 + gWater; //calculate grams water accounting for grounds absorption
+	console.log(brewWater);
+	var recipe = [oz, gCoffee, brewWater, ratio];
+	console.log(recipe);
+	return recipe;
 }
+
+brewButton.addEventListener("click", calculateBrew);
+
+
+
 
