@@ -15,29 +15,19 @@
 	</header>
 	<div id="container">
 		<div class="col">
-			<div class="inputDiv">
-				<p>Fluid ounces of brewed coffee:</p>
-				<form id="brew">
-					<input type=text name="oz">
-				</form> 
-			</div>
-			<div class="inputDiv">
-				<p>...with brew method:</p>
-				<select name="methods" form="brew">
-					<option value="chemex">Chemex</option>
-					<option value="drip">Drip Machine</option>
-					<option value="frenchpress">French Press</option>
-				</select>
-			</div>
-			<button type="submit" form="brew" class="button" id="getBrewing">Get Brewing!</button>
+			<p>I want to brew:</p>
+			<input id="ozInput" type="text" name="ounces" maxlength="3">
+			<p>oz of coffee.</p>
+			<button class="button" id="getBrewing">Generate Recipe</button>
 		</div>
-		<div class="col">
+		<div class="col" id="outputCol">
 			<div class="output">
-				<p>Use grams of coffee, <i>ground</i></p>
+				<ul>
+					<li>Use grams of coffee, <i>ground</i></p>
 				<p>Use grams of water</p>
 				<button class="button">Save this recipe</button>
 				<p><i>This recipe uses a brew ratio of 16:1</i></p>
-				<p><i>I tried this, but I like my coffee <button class="button">stonger</button> <button class="button">lighter</button></i></p>
+				<p><i>I tried this, but I like my coffee <button class="button" id="stronger">stonger</button> <button class="button" id="lighter">lighter</button></i></p>
 			</div>
 		</div>
 	</div>
