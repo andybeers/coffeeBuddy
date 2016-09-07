@@ -140,7 +140,7 @@ h1 {
 }
 
 p {
-	font-size: 1.15em;
+	font-size: 1.1em;
 	margin-top: .9em;
 	margin-bottom: .9em;
 }
@@ -159,12 +159,12 @@ p {
 }
 
 .gramsToWater, #ozInput {
-	font-size: 1.15em;
+	font-size: 1.1em;
 }
 
 .button {
-	font-size: 1.15em;
-	padding: .8em;
+	font-size: 1.1em;
+	padding: .6em;
 }
 
 
