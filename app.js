@@ -17,7 +17,7 @@ function calculateBrew() {
 		var absorption = ratioNumber - 2; // account for grounds absorbing twice their weight in water
 		var gCoffee = Math.round(finalWater/absorption); //calculate grams coffee
 		console.log(gCoffee);
-		var gWater = finalWater + (gCoffee * 2); //calculate grams water used in recipe
+		var gWater = Math.round(finalWater + (gCoffee * 2)); //calculate grams water used in recipe
 		var calcRecipe = [oz, gCoffee, gWater, ratioNumber]; //store recipe values in array
 		console.log(calcRecipe);
 		document.getElementById("outputCoffee").textContent = calcRecipe[1]; //write coffee output to page
