@@ -10,7 +10,7 @@ function calculateBrew() {
 	var oz = parseInt(document.getElementById("ozInput").value); //grab user input value for oz
 	console.log(oz + " oz input");
 	if (isNaN(oz)) {
-		alert("Please enter a number");
+		alert("Please enter an ounce number.");
 	} else {
 		var finalWater = oz * 29.57; //convert fluid oz to grams
 		console.log(finalWater + " grams of water");
@@ -58,7 +58,7 @@ strongerButton.addEventListener("click", makeStronger);
 lighterButton.addEventListener("click", makeLighter);
 
 //Clear text input for recipe on focus
-nameField.addEventListener("mousedown", clearField);
+nameField.addEventListener("focus", clearField);
 
 
 function Recipe(name, ounces, gramsCoffee, gramsWater, ratioWater) {
