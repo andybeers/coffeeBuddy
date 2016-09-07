@@ -47,8 +47,14 @@ p {
 	margin: .5rem;
 }
 
-#outputCol {
-	font-size: .8em;
+.output span {
+	padding: .5rem;
+	width: 2rem;
+	border: 2px solid #FF9700;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	outline: none;
+	color: #4d4d4d;
 }
 
 /***************
@@ -119,7 +125,7 @@ select {
 	border-radius: 5px;
 	background-color: #4da6ff;
 	color: #fff7e6;
-	box-shadow: 2px 3px 13px -5px rgba(0,0,0,0.75);
+	box-shadow: 2px 3px 10px -5px rgba(0,0,0,0.75);
 	outline: none;
 }
 
