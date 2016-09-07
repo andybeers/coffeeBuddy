@@ -2,6 +2,7 @@ var brewButton = document.getElementById("getBrewing");
 var strongerButton = document.getElementById("stronger");
 var lighterButton = document.getElementById("lighter");
 var saveButton = document.getElementById("save");
+var nameField = document.getElementById("nameInput");
 
 
 function calculateBrew() {
@@ -43,6 +44,10 @@ function makeStronger() {
 	calculateBrew(); 
 }
 
+function clearField() {
+	this.placeholder = "";
+}
+
 //Wire up "calculate brew" button
 brewButton.addEventListener("click", calculateBrew);
 
@@ -51,6 +56,10 @@ strongerButton.addEventListener("click", makeStronger);
 
 //Wire up "weaker" button
 lighterButton.addEventListener("click", makeLighter);
+
+//Clear text input for recipe on focus
+nameField.addEventListener("mousedown", clearField);
+
 
 
 
