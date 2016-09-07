@@ -1,30 +1,50 @@
-var oz;
-var ratio = 16;
-var gCoffee;
-var gWater;
-var brewWater
+var brewButton = document.getElementById("getBrewing");
+var strongerButton = document.getElementById("stronger");
+var weakerButton = document.getElementById("lighter");
+var saveButton = document.getElementById("save");
 
-//convert fluid oz input to grams
-function convert(oz) {
-	return (oz * 29.57);
+
+function calculateBrew() {
+	var ratio = 16; //Set default ratio 16:1
+	var oz = parseInt(document.getElementById("ozInput").value); //grab user input value for oz
+	console.log(oz + " oz input");
+	var gWater = oz * 29.57; //convert fluid oz to grams
+	console.log(gWater + " grams of water");
+	var gCoffee = Math.round(gWater/ratio); //calculate grams coffee
+	console.log(gCoffee);
+	var brewWater = Math.round(gCoffee * 2 + gWater); //calculate grams water accounting for grounds absorption
+	console.log(brewWater);
+	var calcRecipe = [oz, gCoffee, brewWater, ratio];
+	console.log(calcRecipe);
+	document.getElementById("outputCoffee").textContent = calcRecipe[1];
+	document.getElementById("outputWater").textContent = calcRecipe[2];
+	return calcRecipe;
 }
 
+brewButton.addEventListener("click", calculateBrew);
 
-// oz * 29.57 / ratio = gCoffee
-// gCoffee * 2 + gWater = brewWater 
-
-//Funtion to calculate appropriate grams of coffee and water to use in brew recipe based on user's desired fluid ounces of final brew
-function calculateBrew (oz, ratio) {
-	gWater = convert(oz); //grams water
-	gCoffee = gWater / ratio; //grams coffee
-	brewWater = gCoffee * 2 + gWater; //grams water adjusted up to account for absorption by grounds
-	return {
-		gCoffee: gCoffee,
-		brewWater: brewWater,
-		ratio: ratio,
-		oz: oz
-	}
+function Recipe(name, ounces, gramsCoffee, gramsWater, ratioWater) {
+	this.name = name;
+	this.ounces = ounces;
+	this.gramsCoffee = gramsCoffee;
+	this.gramsWater = gramsWater;
+	this.ratioWater = ratioWater;
 }
 
-console.log(calculateBrew(20, 17));
+// function writeRecipe(outputId, recipeArray) {
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
 

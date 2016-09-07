@@ -4,15 +4,23 @@ General
 
 body {
 	font-family: 'Roboto', 'Arial', sans-serif;
-	font-size: 1rem;
-	text-align: center;
 	color: #767676;
 	background-color: #fff7e6;
+	text-align: center;
 }
 
-#col1, #col2 {
-	max-width: 300px;
-	margin: .75rem auto 0;
+#container {
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	justify-content: center;
+	align-content: stretch;
+}
+
+.col {
+	width: 75%;
+	margin: .75rem auto;
 	padding: .5rem .5rem;
 	background-color: white;
 	border: 2px solid #f2f2f2;
@@ -20,26 +28,34 @@ body {
 	box-shadow: 2px 3px 13px -5px rgba(0,0,0,0.75);
 }
 
+.inputDiv {
+	display: flex;
+	justify-content: space-around; 
+	align-items: center;
+	flex-grow: 1;
+}
+
+
 p {
 	font-family: 'Roboto', 'Arial', sans-serif;
-	font-size: 1rem;
+	font-size: 1em;
 	font-weight: 400;
 	color: #767676;
 	margin: .5rem;
 }
 
-#inputOz, #inputMethod {
-	display: flex;
-	justify-content: space-between; 
-	align-items: center;
+.gramsToWater {
+	margin: 1.5rem 5%;
 }
 
-.input {
-	border: 2px solid #595959;
-}
-
-.beforeinput {
-	margin-right: .2rem;
+.output span {
+	margin: .75rem;
+	padding: .5rem;
+	border: 2px solid #FF9700;
+	border-radius: 5px;
+	background-color: #f2f2f2;
+	outline: none;
+	color: #4d4d4d;
 }
 
 /***************
@@ -75,7 +91,7 @@ h1 {
 Inputs and Buttons
 ****************/
 
-#brew input[type=text] {
+#ozInput[type=text] {
 	padding: .5rem;
 	width: 2rem;
 	border: 2px solid #FF9700;
@@ -84,7 +100,7 @@ Inputs and Buttons
 	outline: none;
 }
 
-#brew input[type=text]:focus {
+#ozInput[type=text]:focus {
 	background-color: white;
 }
 
@@ -103,13 +119,52 @@ select {
 }
 
 .button {
-	width: auto;
-	padding: .35rem;
+	padding: .45rem;
 	margin: .6rem;
 	border: none;
 	border-radius: 5px;
 	background-color: #4da6ff;
 	color: #fff7e6;
-	box-shadow: 2px 3px 13px -5px rgba(0,0,0,0.75);
+	box-shadow: 2px 3px 10px -5px rgba(0,0,0,0.75);
+	outline: none;
 }
+
+/***************
+Media Queries
+****************/
+
+@media screen and (min-width: 580px) {
+
+h1 {
+	font-size: 2em;
+}
+
+p {
+	font-size: 1.1em;
+	margin-top: .9em;
+	margin-bottom: .9em;
+}
+
+#main-header {
+	height: 65px;
+}
+
+.gramsToWater {
+	margin: 1.5rem 9% 1.5rem 22%;
+	text-align: left;
+}
+
+.col {
+	max-width: 400px;
+}
+
+.gramsToWater, #ozInput {
+	font-size: 1.1em;
+}
+
+.button {
+	font-size: 1.1em;
+	padding: .6em;
+}
+
 
