@@ -12,13 +12,13 @@ function calculateBrew() {
 	if (isNaN(oz)) {
 		alert("Please enter a number");
 	} else {
-		var gWater = oz * 29.57; //convert fluid oz to grams
-		console.log(gWater + " grams of water");
-		var gCoffee = Math.round(gWater/ratioNumber); //calculate grams coffee
+		var finalWater = oz * 29.57; //convert fluid oz to grams
+		console.log(finalWater + " grams of water");
+		var absorption = ratioNumber - 2; // account for grounds absorbing twice their weight in water
+		var gCoffee = Math.round(finalWater/absorption); //calculate grams coffee
 		console.log(gCoffee);
-		var brewWater = Math.round(gCoffee * 2 + gWater); //calculate grams water accounting for grounds absorption
-		console.log(brewWater);
-		var calcRecipe = [oz, gCoffee, brewWater, ratioNumber]; //store recipe values in array
+		var gWater = finalWater + (gCoffee * 2); //calculate grams water used in recipe
+		var calcRecipe = [oz, gCoffee, gWater, ratioNumber]; //store recipe values in array
 		console.log(calcRecipe);
 		document.getElementById("outputCoffee").textContent = calcRecipe[1]; //write coffee output to page
 		document.getElementById("outputWater").textContent = calcRecipe[2]; //write water output to page
@@ -59,9 +59,6 @@ lighterButton.addEventListener("click", makeLighter);
 
 //Clear text input for recipe on focus
 nameField.addEventListener("mousedown", clearField);
-
-
-
 
 
 function Recipe(name, ounces, gramsCoffee, gramsWater, ratioWater) {
