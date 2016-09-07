@@ -19,7 +19,7 @@ body {
 }
 
 .col {
-	width: 75%;
+	width: 85%;
 	margin: .5rem auto;
 	padding: .5rem .5rem;
 	background-color: white;
@@ -154,11 +154,31 @@ select {
 	outline: none;
 }
 
+#saveDiv {
+	display: flex;
+	justify-content: center;
+}
+
+
+#nameInput {
+	border-radius: 5px;
+	border: none;
+	background-color: #f2f2f2;
+	outline: none;
+	/*width: auto;*/
+	font-size: .8em;
+}
+
 /***************
 Media Queries
 ****************/
 
 @media screen and (min-width: 580px) {
+
+body {
+	background-image: url("img/rrTable.png");
+	background-size: cover;
+}
 
 h1 {
 	font-size: 2em;
