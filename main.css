@@ -116,7 +116,7 @@ h1 {
 Inputs and Buttons
 ****************/
 
-#ozInput[type=text] {
+#ozInput {
 	padding: .5rem;
 	width: 2rem;
 	border: 2px solid #FF9700;
@@ -125,7 +125,7 @@ Inputs and Buttons
 	outline: none;
 }
 
-#ozInput[type=text]:focus {
+#ozInput:focus {
 	background-color: white;
 }
 
@@ -157,6 +157,7 @@ select {
 #saveDiv {
 	display: flex;
 	justify-content: center;
+	align-items: center;
 }
 
 
@@ -165,8 +166,9 @@ select {
 	border: none;
 	background-color: #f2f2f2;
 	outline: none;
-	/*width: auto;*/
+	width: 60%;
 	font-size: .8em;
+	padding: .5em;
 }
 
 /***************
@@ -176,7 +178,7 @@ Media Queries
 @media screen and (min-width: 580px) {
 
 body {
-	background-image: url("img/rrTable.png");
+	background-image: url("img/rrTable35.png");
 	background-size: cover;
 }
 
@@ -216,4 +218,11 @@ h3 {
 	padding: .6em;
 }
 
+#saveDiv {
+	align-items: stretch;
+}
+
+#nameInput {
+	margin: .8em 0;
+}
 
