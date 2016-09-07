@@ -178,7 +178,8 @@ Media Queries
 @media screen and (min-width: 580px) {
 
 body {
-	background-image: url("img/rrTable35.png");
+	background-color: #404040;
+	background-image: url("img/rrTable25.png");
 	background-size: cover;
 }
 
@@ -197,7 +198,7 @@ h3 {
 }
 
 #main-header {
-	height: 65px;
+	height: 60px;
 }
 
 .gramsToWater {
