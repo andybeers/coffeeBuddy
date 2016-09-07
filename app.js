@@ -1,6 +1,6 @@
 var brewButton = document.getElementById("getBrewing");
 var strongerButton = document.getElementById("stronger");
-var weakerButton = document.getElementById("lighter");
+var lighterButton = document.getElementById("lighter");
 var saveButton = document.getElementById("save");
 
 
@@ -25,17 +25,32 @@ function calculateBrew() {
 	}
 }
 
+function makeLighter() {
+	var ogRatio = document.getElementById("ratio").textContent;
+	console.log(ogRatio);
+	var lightRatio = parseInt(ogRatio) +1;
+	console.log(lightRatio);
+	document.getElementById("ratio").textContent = lightRatio;
+	calculateBrew(); 
+}
+
 function makeStronger() {
-	document.getElementById("ratio").textContent 
+	var ogRatio = document.getElementById("ratio").textContent;
+	console.log(ogRatio);
+	var strongRatio = parseInt(ogRatio) -1;
+	console.log(strongRatio);
+	document.getElementById("ratio").textContent = strongRatio;
+	calculateBrew(); 
 }
 
 //Wire up "calculate brew" button
 brewButton.addEventListener("click", calculateBrew);
 
 //Wire up "stronger" button
-strongerButton.addEventListener("click", )''
+strongerButton.addEventListener("click", makeStronger);
 
 //Wire up "weaker" button
+lighterButton.addEventListener("click", makeLighter);
 
 
 
