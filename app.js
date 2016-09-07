@@ -21,7 +21,11 @@ function calculateBrew() {
 	return calcRecipe;
 }
 
+//Wire up 
 brewButton.addEventListener("click", calculateBrew);
+
+
+
 
 function Recipe(name, ounces, gramsCoffee, gramsWater, ratioWater) {
 	this.name = name;
