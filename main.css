@@ -35,9 +35,6 @@ body {
 	flex-grow: 1;
 }
 
-.input {
-	border: 2px solid #595959;
-}
 
 p {
 	font-family: 'Roboto', 'Arial', sans-serif;
@@ -47,9 +44,13 @@ p {
 	margin: .5rem;
 }
 
+.gramsToWater {
+	margin: 1.5rem 5%;
+}
+
 .output span {
+	margin: .75rem;
 	padding: .5rem;
-	width: 2rem;
 	border: 2px solid #FF9700;
 	border-radius: 5px;
 	background-color: #f2f2f2;
@@ -118,8 +119,7 @@ select {
 }
 
 .button {
-	width: auto;
-	padding: .35rem;
+	padding: .45rem;
 	margin: .6rem;
 	border: none;
 	border-radius: 5px;
@@ -135,17 +135,36 @@ Media Queries
 
 @media screen and (min-width: 580px) {
 
-#container {
-	flex-direction: row;
-}
-
-.col {
-	/*width: 46%;*/
+h1 {
+	font-size: 2em;
 }
 
 p {
-	font-size: 1em;
+	font-size: 1.15em;
+	margin-top: .9em;
+	margin-bottom: .9em;
 }
 
+#main-header {
+	height: 65px;
 }
+
+.gramsToWater {
+	margin: 1.5rem 9% 1.5rem 22%;
+	text-align: left;
+}
+
+.col {
+	max-width: 400px;
+}
+
+.gramsToWater, #ozInput {
+	font-size: 1.15em;
+}
+
+.button {
+	font-size: 1.15em;
+	padding: .8em;
+}
+
 
