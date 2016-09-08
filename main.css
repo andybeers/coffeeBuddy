@@ -97,7 +97,7 @@ Header
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px -1px 8px #767676;
+  box-shadow: 0px 1px 10px #404040;
   margin-bottom: .5rem;
 }
 
