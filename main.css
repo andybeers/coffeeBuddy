@@ -146,14 +146,6 @@ input {
 	color: #4d4d4d;
 }
 
-select {
-	border: none;
-	border-radius: 5px;
-	outline: none;
-	background-color: #f2f2f2;
-	color: #4d4d4d;
-}
-
 .button {
 	padding: .45rem;
 	margin: .6rem;
@@ -180,6 +172,19 @@ select {
 	width: 60%;
 	font-size: .8em;
 	padding: .5em;
+}
+
+select {
+	width: auto;
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	font-size: .8em;
+	color: #fff7e6;
+	background-color: #4da6ff;
+	margin: .4em;
+	outline: none;
+	box-shadow: 2px 3px 10px -5px rgba(0,0,0,0.75);
 }
 
 /***************
@@ -236,6 +241,10 @@ h3 {
 
 #nameInput {
 	margin: .8em 0;
+	font-size: 1em;
+}
+
+select {
 	font-size: 1em;
 }
 
