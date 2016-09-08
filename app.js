@@ -3,6 +3,7 @@ var strongerButton = document.getElementById("stronger");
 var lighterButton = document.getElementById("lighter");
 var saveButton = document.getElementById("save");
 var nameField = document.getElementById("nameInput");
+var selectDrop = document.getElementById("savedRec");
 var recipeOutput = [];
 
 function calculateBrew() {
@@ -78,6 +79,7 @@ function createRecipe() {
 	var ratio = recipeOutput[3];
 	var recipe = [oz, ratio]
 	localStorage.setItem(recName, JSON.stringify(recipe));
+	console.log(recipe + " set to local storage");
 	var dropDown = document.getElementById("savedRec");
 	var newOption = document.createElement("option");
 	newOption.textContent = recName;
@@ -85,53 +87,54 @@ function createRecipe() {
 	dropDown.appendChild(newOption);
 }
 
-function createRecipeList() {
-	var nameIndex = localStorage.length;
-	var dropDown = document.getElementById("savedRec");
-	var newOption = document.createElement("option");
-	if (nameIndex >= 1) {
-		for (i = 0; i < nameIndex; i++) {
-			newOption.textContent = localStorage.key[i];
-			newOption.setAttribute("value", localStorage.key[i]);
-			dropDown.appendChild(newOption);
-		}
-	} 
+window.onLoad = createRecipeList();
 
+function createRecipeList() {
+	console.log("Onload select creation running!");
+	var nameIndex = localStorage.length;
+	for (i = 0; i < nameIndex; i++) {
+		var dropDown = document.getElementById("savedRec");
+		var newOption = document.createElement("option");
+		newOption.innerText = localStorage.key(i);
+		newOption.setAttribute("value", localStorage.key(i));
+		dropDown.appendChild(newOption);
+	}
 }
 
 //Function to repopulate DOM with saved recipe values
+selectDrop.addEventListener("change", savedRecipe);
+
+function savedRecipe() {
+	var name = selectDrop.value;
+	console.log(name);
+	var recipe = JSON.parse(localStorage.getItem(name));
+	console.log(recipe);
+	document.getElementById("ozInput").value = parseInt(recipe[0]);
+	document.getElementById("ratio").textContent = recipe[1];
+	calculateBrew();
+}
 
 
-// var keyNames[];
-// var values[];
-// // iterate through array
-// var numKeys = localStorage.length;
-// for(i=0;i<numKeys;i++) {
-//     // get key name into an array
-//     keyNames[i]=localStorage.key(i);
-//     // use key name to retreive value and store in array
-//     values[i]=localStorage.getItem(keyNames[i]);
+
+
+//Pre- refactored version of drop creation function
+//***************************
+// function createRecipeList() {
+// 	console.log("Onload select creation running!");
+// 	var nameIndex = localStorage.length;
+// 	var names = [];
+// 	for (i = 0; i < nameIndex; i++) {
+// 		names[i] = localStorage.key(i);
+// 	}
+// 	console.log(names);
+// 	for (i = 0; i < names.length; i++) {
+// 		var dropDown = document.getElementById("savedRec");
+// 		var newOption = document.createElement("option");
+// 		newOption.innerText = names[i];
+// 		newOption.setAttribute("value", names[i]);
+// 		dropDown.appendChild(newOption);
+// 	}
 // }
-
-
-
-
-
-
-// localStorage.setItem("key", "value");
-// localStorage.getItem("key"); --> "value"
-
-// localStorage.setItem("object", JSON.stringify(object));
-// console.log(JSON.parse(localStorage.getItem("car")));
-
-
-
-
-
-
-
-
-
 
 
 
