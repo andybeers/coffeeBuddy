@@ -19,7 +19,7 @@ body {
 }
 
 .col {
-	width: 75%;
+	width: 85%;
 	margin: .5rem auto;
 	padding: .5rem .5rem;
 	background-color: white;
@@ -44,6 +44,22 @@ p {
 	margin: .5rem;
 }
 
+.ratioP {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: .9em;
+	font-weight: 400;
+	color: #767676;
+	margin: .5em;
+	padding: .5em;
+	text-align: left;
+	line-height: 130%;
+}
+
+a {
+	text-decoration: none;
+	color: #4da6ff;
+}
+
 .emphasis {
 	font-family: 'Roboto', 'Arial', sans-serif;
 	font-size: 1em;
@@ -57,6 +73,15 @@ h3 {
 	font-weight: 400;
 	color: #767676;
 	margin: .5rem;
+}
+
+h2 {
+	font-size: 1.25em;
+	font-family: 'Maven Pro', sans-serif;
+	margin: auto 0;
+	padding: 5px;
+	color: #4da6ff;
+	border-bottom: 1px solid #4d4d4d;
 }
 
 .gramsToWater {
@@ -92,7 +117,7 @@ Header
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0px -1px 8px #767676;
+  box-shadow: 0px 1px 10px #404040;
   margin-bottom: .5rem;
 }
 
@@ -112,11 +137,17 @@ h1 {
 	padding: 0;
 }
 
+footer {
+	height: 20px;
+	color: #d9d9d9;
+	margin-top: 2em;
+}
+
 /***************
 Inputs and Buttons
 ****************/
 
-#ozInput[type=text] {
+#ozInput {
 	padding: .5rem;
 	width: 2rem;
 	border: 2px solid #FF9700;
@@ -125,21 +156,13 @@ Inputs and Buttons
 	outline: none;
 }
 
-#ozInput[type=text]:focus {
+#ozInput:focus {
 	background-color: white;
 }
 
 input {
 	text-align: center;
 	font-family: 'Roboto', 'Arial', sans-serif;
-	color: #4d4d4d;
-}
-
-select {
-	border: none;
-	border-radius: 5px;
-	outline: none;
-	background-color: #f2f2f2;
 	color: #4d4d4d;
 }
 
@@ -154,11 +177,47 @@ select {
 	outline: none;
 }
 
+#saveDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#nameInput {
+	border-radius: 5px;
+	border: none;
+	background-color: #f2f2f2;
+	outline: none;
+	width: 60%;
+	font-size: .8em;
+	padding: .5em;
+}
+
+select {
+	width: auto;
+	border: none;
+	border-radius: 5px;
+	text-align: center;
+	font-size: .8em;
+	color: #fff7e6;
+	background-color: #4da6ff;
+	margin: .4em;
+	outline: none;
+	box-shadow: 2px 3px 10px -5px rgba(0,0,0,0.75);
+}
+
 /***************
 Media Queries
 ****************/
 
 @media screen and (min-width: 580px) {
+
+body {
+	background-color: #404040;
+	background-image: url("img/rrTable25.png");
+	background-size: cover;
+}
 
 h1 {
 	font-size: 2em;
@@ -174,8 +233,13 @@ h3 {
 	font-size: 1em;
 }
 
+h2 {
+	font-size: 1.75em;
+	border-width: 2px;
+}
+
 #main-header {
-	height: 65px;
+	height: 60px;
 }
 
 .gramsToWater {
@@ -196,4 +260,20 @@ h3 {
 	padding: .6em;
 }
 
+#saveDiv {
+	align-items: stretch;
+}
+
+#nameInput {
+	margin: .8em 0;
+	font-size: 1em;
+}
+
+select {
+	font-size: 1em;
+}
+
+.ratioP {
+	font-size: 1.1em;
+}
 
