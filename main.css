@@ -44,6 +44,17 @@ p {
 	margin: .5rem;
 }
 
+.ratioP {
+	font-family: 'Roboto', 'Arial', sans-serif;
+	font-size: .9em;
+	font-weight: 400;
+	color: #767676;
+	margin: .5em;
+	padding: .5em;
+	text-align: left;
+	line-height: 130%;
+}
+
 a {
 	text-decoration: none;
 	color: #4da6ff;
@@ -62,6 +73,15 @@ h3 {
 	font-weight: 400;
 	color: #767676;
 	margin: .5rem;
+}
+
+h2 {
+	font-size: 1.25em;
+	font-family: 'Maven Pro', sans-serif;
+	margin: auto 0;
+	padding: 5px;
+	color: #4da6ff;
+	border-bottom: 1px solid #4d4d4d;
 }
 
 .gramsToWater {
@@ -213,6 +233,11 @@ h3 {
 	font-size: 1em;
 }
 
+h2 {
+	font-size: 1.75em;
+	border-width: 2px;
+}
+
 #main-header {
 	height: 60px;
 }
@@ -246,5 +271,9 @@ h3 {
 
 select {
 	font-size: 1em;
+}
+
+.ratioP {
+	font-size: 1.1em;
 }
 
