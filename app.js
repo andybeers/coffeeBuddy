@@ -109,4 +109,5 @@ function savedRecipe() {
 	document.getElementById("ozInput").value = parseInt(recipe[0]); //Write oz value to DOM
 	document.getElementById("ratio").textContent = recipe[1]; //Write ratio to DOM
 	calculateBrew(); //Run calculate brew using saved recipe values
+	clearField();
 }
