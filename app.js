@@ -15,13 +15,10 @@ function calculateBrew() {
 		alert("Please enter an ounce number.");
 	} else {
 		var finalWater = oz * 29.57; //convert fluid oz to grams
-		console.log(finalWater + " grams of water");
 		var absorption = ratioNumber - 2; // account for grounds absorbing twice their weight in water
 		var gCoffee = Math.round(finalWater/absorption); //calculate grams coffee
-		console.log(gCoffee);
 		var gWater = Math.round(finalWater + (gCoffee * 2)); //calculate grams water used in recipe
 		var calcRecipe = [oz, gCoffee, gWater, ratioNumber]; //store recipe values in array
-		console.log(calcRecipe);
 		document.getElementById("outputCoffee").textContent = calcRecipe[1]; //write coffee output to page
 		document.getElementById("outputWater").textContent = calcRecipe[2]; //write water output to page
 		recipeOutput = calcRecipe; //store recipe in global variable as an array
@@ -31,9 +28,7 @@ function calculateBrew() {
 //Function to increase ("widen") brew ratio
 function makeLighter() {
 	var ogRatio = document.getElementById("ratio").textContent; //get ratio from DOM
-	console.log(ogRatio);
 	var lightRatio = parseInt(ogRatio) +1; //increase ratio by 1
-	console.log(lightRatio);
 	document.getElementById("ratio").textContent = lightRatio; //write new ratio to DOM
 	calculateBrew(); //recalculate brew using new ratio value
 }
@@ -41,9 +36,7 @@ function makeLighter() {
 //Function to decrease ("tighten") brew ratio
 function makeStronger() {
 	var ogRatio = document.getElementById("ratio").textContent; //get ratio from DOM
-	console.log(ogRatio);
 	var strongRatio = parseInt(ogRatio) -1; //decrement ratio
-	console.log(strongRatio);
 	document.getElementById("ratio").textContent = strongRatio; //write new ratio to DOM
 	calculateBrew(); //recalculate brew using new ratio value
 }
@@ -85,7 +78,6 @@ function createRecipe() {
 
 //Function to construct dropdown with previously saved recipes
 function createRecipeList() {
-	console.log("Onload select creation running!");
 	var nameIndex = localStorage.length;
 	for (i = 0; i < nameIndex; i++) { //Iterate through local storage
 		var dropDown = document.getElementById("savedRec"); //Select dropdown
