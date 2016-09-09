@@ -10,9 +10,8 @@ var recipeOutput = []; //Create array to store recipe values
 function calculateBrew() {
 	var ratioNumber = document.getElementById("ratio").textContent; //Grab ratio from page. Default is 16:1
 	var oz = parseInt(document.getElementById("ozInput").value); //Grab user input value for oz
-	console.log(oz + " oz input");
-	if (isNaN(oz)) { //Make sure oz input isn't empty or invalid
-		alert("Please enter an ounce number.");
+	if (isNaN(oz) || oz < 2) { //Make sure oz input isn't empty or invalid
+		alert("Please enter an ounce number > 1.");
 	} else {
 		var finalWater = oz * 29.57; //convert fluid oz to grams
 		var absorption = ratioNumber - 2; // account for grounds absorbing twice their weight in water
@@ -28,17 +27,25 @@ function calculateBrew() {
 //Function to increase ("widen") brew ratio
 function makeLighter() {
 	var ogRatio = document.getElementById("ratio").textContent; //get ratio from DOM
-	var lightRatio = parseInt(ogRatio) +1; //increase ratio by 1
-	document.getElementById("ratio").textContent = lightRatio; //write new ratio to DOM
-	calculateBrew(); //recalculate brew using new ratio value
+	if (ogRatio < 22) {
+		var lightRatio = parseInt(ogRatio) +1; //increase ratio by 1
+		document.getElementById("ratio").textContent = lightRatio; //write new ratio to DOM
+		calculateBrew(); //recalculate brew using new ratio value
+	} else {
+		alert("Sorry, calculation does not support wider ratios.");
+	}
 }
 
 //Function to decrease ("tighten") brew ratio
 function makeStronger() {
 	var ogRatio = document.getElementById("ratio").textContent; //get ratio from DOM
-	var strongRatio = parseInt(ogRatio) -1; //decrement ratio
-	document.getElementById("ratio").textContent = strongRatio; //write new ratio to DOM
-	calculateBrew(); //recalculate brew using new ratio value
+	if (ogRatio > 10) {
+		var strongRatio = parseInt(ogRatio) -1; //decrement ratio
+		document.getElementById("ratio").textContent = strongRatio; //write new ratio to DOM
+		calculateBrew(); //recalculate brew using new ratio value
+	} else {
+		alert("Sorry, calculation does not support tighter ratios.");
+	}
 }
 
 //Function to clear input field once the user focuses
@@ -68,7 +75,7 @@ function createRecipe() {
 	var ratio = recipeOutput[3];
 	var recipe = [oz, ratio];
 	localStorage.setItem(recName, JSON.stringify(recipe)); //Store recipe name and values in local storage as key:value strings
-	console.log(recipe + " set to local storage");
+	console.log(recName + " set to local storage");
 	var dropDown = document.getElementById("savedRec"); //Select dropdown
 	var newOption = document.createElement("option"); //Create new option
 	newOption.textContent = recName; //Assign recipe name to new option
@@ -99,7 +106,6 @@ function savedRecipe() {
 	var name = selectDrop.value; //Grab selected option
 	console.log(name);
 	var recipe = JSON.parse(localStorage.getItem(name)); //Retrieve corresponding values from local storage
-	console.log(recipe);
 	document.getElementById("ozInput").value = parseInt(recipe[0]); //Write oz value to DOM
 	document.getElementById("ratio").textContent = recipe[1]; //Write ratio to DOM
 	calculateBrew(); //Run calculate brew using saved recipe values
