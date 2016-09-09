@@ -207,6 +207,10 @@ select {
 	box-shadow: 2px 3px 10px -5px rgba(0,0,0,0.75);
 }
 
+.pressed {
+	border: 2px solid #FF9700;
+}
+
 /***************
 Media Queries
 ****************/

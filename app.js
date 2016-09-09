@@ -67,6 +67,17 @@ lighterButton.addEventListener("click", makeLighter);
 
 //Wire up "save" button
 saveButton.addEventListener("click", createRecipe);
+saveButton.addEventListener("mousedown", pressedButton);
+saveButton.addEventListener("mouseup", releasedButton);
+
+
+//Functions to change save button border color while being pressed for visual feedback
+function pressedButton() {
+	saveButton.className += " pressed";
+}
+function releasedButton() {
+	saveButton.className = "button";
+}
 
 //Function to save recipe in local storage
 function createRecipe() {
@@ -81,6 +92,7 @@ function createRecipe() {
 	newOption.textContent = recName; //Assign recipe name to new option
 	newOption.setAttribute("value", recName); //Assign option value
 	dropDown.appendChild(newOption); //Add new option to dropdown
+	nameField.value = ""; //Clear input field
 }
 
 //Function to construct dropdown with previously saved recipes
@@ -109,5 +121,4 @@ function savedRecipe() {
 	document.getElementById("ozInput").value = parseInt(recipe[0]); //Write oz value to DOM
 	document.getElementById("ratio").textContent = recipe[1]; //Write ratio to DOM
 	calculateBrew(); //Run calculate brew using saved recipe values
-	clearField();
 }
