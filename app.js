@@ -67,6 +67,17 @@ lighterButton.addEventListener("click", makeLighter);
 
 //Wire up "save" button
 saveButton.addEventListener("click", createRecipe);
+saveButton.addEventListener("mousedown", pressedButton);
+saveButton.addEventListener("mouseup", releasedButton);
+
+
+//Functions to change save button border color while being pressed for visual feedback
+function pressedButton() {
+	saveButton.className += " pressed";
+}
+function releasedButton() {
+	saveButton.className = "button";
+}
 
 //Function to save recipe in local storage
 function createRecipe() {
@@ -81,6 +92,7 @@ function createRecipe() {
 	newOption.textContent = recName; //Assign recipe name to new option
 	newOption.setAttribute("value", recName); //Assign option value
 	dropDown.appendChild(newOption); //Add new option to dropdown
+	nameField.value = ""; //Clear input field
 }
 
 //Function to construct dropdown with previously saved recipes
