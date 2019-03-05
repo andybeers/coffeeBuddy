@@ -1,52 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>coffeeBuddy</title>
-	<link href="https://fonts.googleapis.com/css?family=Maven+Pro|Roboto:400,400i,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-	<header>
-		<a href="index.html" id="main-header">
-			<h1>coffeeBuddy</h1>
-			<img src="img/coffeeLogoAccent3.png" alt="coffeeBuddy logo" id="mug">
-		</a>
-	</header>
-	<div id="container">
-		<div class="col">
-			<p>I want to brew:</p>
-			<input id="ozInput" type="text" name="ounces" maxlength="3">
-			<p>oz of coffee.</p>
-			<button class="button" id="getBrewing">Generate Recipe</button>
-		</div>
-		<div class="col">
-			<div class="output">
-				<p class="gramsToWater"><span id="outputCoffee">....</span>grams of <span class="emphasis">coffee.</span></p>
-				<p class="gramsToWater"><span id="outputWater">....</span>grams of <span class="emphasis">water.</span></p>
-				<h3>This recipe uses a brew ratio of <span id="brewRatio"><b>1:<span id="ratio">16</span></b></span><span class="question"><a href="ratio.html" title="What does brew ratio mean?">?</a></span></h3>
-				<h3><i>I tried this, but I like my coffee:</i></h3>
-				<button class="button" id="stronger">Stonger</button> <button class="button" id="lighter">Lighter</button><br>
-				<div id="saveDiv">
-					<input id="nameInput" type="text" placeholder="Name your recipe!">
-					<button class="button" id="save">Save</button>
-				</div>
-				<select id="savedRec">
-						<option selected disabled>Saved recipes</option>
-				</select>
-			</div>
-		</div>
-	</div>
-	<footer>
-		<h3>&copy; 2016 Andy Beers</h3>
-		<h3>Photo by @julienicklas</h3>
-	</footer>
-	<script type="text/javascript" src="app.js"></script>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>coffeeBuddy</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Maven+Pro|Roboto:400,400i,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html" id="main-header">
+        <h1>coffeeBuddy</h1>
+        <img src="img/coffeeLogoAccent3.png" alt="coffeeBuddy logo" id="mug" />
+      </a>
+    </header>
+    <div id="container">
+      <div class="col">
+        <p>I want to brew:</p>
+        <input id="ozInput" type="text" name="ounces" maxlength="3" />
+        <p>oz of coffee.</p>
+        <button class="button" id="getBrewing">Generate Recipe</button>
+      </div>
+      <div class="col">
+        <div class="output">
+          <p class="gramsToWater">
+            <span id="outputCoffee">....</span>grams of
+            <span class="emphasis">coffee.</span>
+          </p>
+          <p class="gramsToWater">
+            <span id="outputWater">....</span>grams of
+            <span class="emphasis">water.</span>
+          </p>
+          <h3>
+            This recipe uses a brew ratio of
+            <span id="brewRatio"
+              ><b>1:<span id="ratio">16</span></b></span
+            ><span class="question"
+              ><a href="ratio.html" title="What does brew ratio mean?">?</a></span
+            >
+          </h3>
+          <h3><i>I tried this, but I like my coffee:</i></h3>
+          <button class="button" id="stronger">Stonger</button>
+          <button class="button" id="lighter">Lighter</button><br />
+          <div id="saveDiv">
+            <input id="nameInput" type="text" placeholder="Name your recipe!" />
+            <button class="button" id="save">Save</button>
+          </div>
+          <select id="savedRec">
+            <option selected disabled>Saved recipes</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h3>Andy Beers</h3>
+      <h3>Built in 2016</h3>
+      <h3>Photo by @julienicklas</h3>
+    </footer>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
 </html>
-
-
-
-
